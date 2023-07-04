@@ -2,7 +2,6 @@ class Solution {
     public int singleNumber(int[] nums) {
         HashMap<Integer,Integer> hm = new HashMap<>();
         int result=0;
-        Deque<Integer> q = new ArrayDeque<>();
 
         for(int i: nums)
         {
