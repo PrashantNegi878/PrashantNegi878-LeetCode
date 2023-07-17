@@ -2,8 +2,8 @@ import java.util.Stack;
 
 class Solution {
     public ListNode helper(ListNode l1, ListNode l2) {
-        Stack<Integer> stack1 = new Stack<>();
-        Stack<Integer> stack2 = new Stack<>();
+        Deque<Integer> stack1 = new ArrayDeque<>();
+        Deque<Integer> stack2 = new ArrayDeque<>();
 
         while (l1 != null) {
             stack1.push(l1.val);
@@ -18,9 +18,9 @@ class Solution {
         ListNode result = null;
         int carry = 0;
 
-        while (!stack1.empty() || !stack2.empty() || carry != 0) {
-            int digit1 = !stack1.empty() ? stack1.pop() : 0;
-            int digit2 = !stack2.empty() ? stack2.pop() : 0;
+        while (stack1.peek()!=null || stack2.peek()!=null || carry != 0) {
+            int digit1 = stack1.peek()!=null ? stack1.poll() : 0;
+            int digit2 = stack2.peek()!=null ? stack2.poll() : 0;
 
             int sum = digit1 + digit2 + carry;
             int digit = sum % 10;
