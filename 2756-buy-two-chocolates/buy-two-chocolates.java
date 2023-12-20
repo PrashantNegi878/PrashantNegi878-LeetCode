@@ -11,7 +11,6 @@ class Solution {
             else if(prices[i]<num2)
             num2=prices[i];
         }
-        System.out.println(num1 +" - "+num2);
         int sum=num1+num2;
         return (money-sum>=0)? money-sum : money;
     }
