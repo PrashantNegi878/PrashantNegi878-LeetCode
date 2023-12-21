@@ -11,6 +11,7 @@ class Solution {
             {
                 if(word.charAt(0)==board[i][j])
                 bfs(i,j,0,board,word,matrix);
+                if (flag) return true;
             }
         }
         return flag;
