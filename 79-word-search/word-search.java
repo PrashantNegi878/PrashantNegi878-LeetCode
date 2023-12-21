@@ -9,6 +9,7 @@ class Solution {
         {
             for(int j=0;j<l2;j++)
             {
+                if(word.charAt(0)==board[i][j])
                 bfs(i,j,0,board,word,matrix);
             }
         }
