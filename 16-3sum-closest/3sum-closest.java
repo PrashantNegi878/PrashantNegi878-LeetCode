@@ -13,6 +13,7 @@ class Solution {
             {
                 sum=nums[i]+nums[a]+nums[b];
                 result=Math.abs(target-sum)<Math.abs(target-result)?sum:result;
+                if(result==target) return target;
                 if(sum<target)a++;
                 else b--;
             }
