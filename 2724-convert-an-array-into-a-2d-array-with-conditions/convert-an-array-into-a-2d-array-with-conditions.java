@@ -6,7 +6,6 @@ class Solution {
         {
             if(map[i]>=result.size())
                 result.add(new ArrayList<>());
-            
             result.get(map[i]).add(i);
             map[i]++;
         }
