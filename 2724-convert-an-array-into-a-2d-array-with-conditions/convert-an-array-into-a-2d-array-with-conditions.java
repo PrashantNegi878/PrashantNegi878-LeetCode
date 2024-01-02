@@ -4,8 +4,9 @@ class Solution {
         int[] map = new int[nums.length+1];
         for(int i:nums)
         {
-            if(map[i]>=result.size())
+            if(map[i]>=result.size()){
                 result.add(new ArrayList<>());
+            }
             result.get(map[i]).add(i);
             map[i]++;
         }
