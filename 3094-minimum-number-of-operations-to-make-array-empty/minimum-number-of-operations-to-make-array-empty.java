@@ -10,7 +10,11 @@ class Solution {
         for(int value : m.values()){
             while(value>0)
             {
-                if(value>=3 && value%3==0) value-=3;
+                if(value>=3 && value%3==0)
+                {
+                    result+=value/3;
+                    break;
+                } 
                 else if(value>=2) value-=2;
                 else return -1;
                 result++;
