@@ -3,18 +3,14 @@
  * @return {Object}
  */
 var expect = (val)=>{
-        function toBe(val2) {
-            if (val2 === val) return true
-            else throw "Not Equal";
-        };
-        function notToBe(val2) {
-            if (val2 !== val)return true
-            else throw "Equal";
-        };
-        return {toBe:toBe,notToBe:notToBe};
+    return{
+        toBe:(val2)=>{
+            if (val2 !== val) throw "Not Equal";
+            else return true;
+        },
+        notToBe:(val2)=>{
+            if (val2 === val) throw "Equal";
+            else return true;
+        }
+    };
 };
-
-/**
- * expect(5).toBe(5); // true
- * expect(5).notToBe(5); // throws "Equal"
- */
