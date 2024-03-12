@@ -5,9 +5,9 @@
 function memoize(fn){
     const map={}
     return function(...args) {
-        if(!(JSON.stringify({...args}) in map))
-            map[JSON.stringify({...args})]=fn(...args);
-        return map[JSON.stringify({...args})];
+        const key=JSON.stringify({...args});
+        if(!(key in map)) map[key]=fn(...args);
+        return map[key];
     }
 }
 
