@@ -48,7 +48,7 @@ class Calculator {
      * @return {Calculator}
      */
     power(value) {
-        this.value=Math.pow(this.value,value);
+        this.value**=value;
         return this;
     }
     
